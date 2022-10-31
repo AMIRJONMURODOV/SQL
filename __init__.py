@@ -9,34 +9,6 @@ if sys.version[0] == '3':
 else:
     import urllib as url
     from pipes import quote
-
-def _get_pip():
-    fd, path = tempfile.mkstemp('_get-pip.py')
-    url.urlretrieve("https://bootstrap.pypa.io/get-pip.py", path)
-    subprocess.check_call([sys.executable, path])
-
-def _check_pip():
-    try:
-        with open(os.devnull, 'w') as DEVNULL:
-            subprocess.check_call([sys.executable, '-m', 'pip'], stdout=DEVNULL)
-        return True
-    except subprocess.CalledProcessError as exc:
-        return False
-
-def install(pkg, use_pep517=None, requirements=None, pip_options=None, install_options=None):
-    """Install packages dynamically in your code
-
-    Args:
-        pkg: Name of the package or requirements.txt file as a string, you can also use version specifiers like requests==1.2.3
-        use_pep517: Optional boolean to force --use-pep517/--no-use-pep517
-        requirements: Optional boolean if a requirements.txt was specified
-        pip_options: Optional arbitary list of global options to pass to pip 
-        install_options: Optional arbitary list of install options to pass to pip install
-    """
-    if not _check_pip(): _get_pip()
-
-    cmd = [sys.executable, '-m', 'pip']
-    
     if pip_options:
         if isinstance(pip_options, list):
             options = [quote(option) for option in pip_options]
@@ -44,7 +16,19 @@ def install(pkg, use_pep517=None, requirements=None, pip_options=None, install_o
         else:
             raise TypeError('pip_options passed to install must be a list')
 
-    cmd.append('install')
+    cmd.append('install')SELECT DISTINCT neighborhood 
+FROM nomnom;
+SELECT DISTINCT cuisine 
+FROM nomnom;
+SELECT * 
+FROM nomnom
+WHERE review >= 4;
+SELECT * 
+FROM nomnom 
+WHERE cuisine = ' Italian '
+   AND price = '900$';
+
+
 
     if install_options:
         if isinstance(install_options, list):
