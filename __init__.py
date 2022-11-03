@@ -41,12 +41,18 @@ WHERE cuisine = ' Italian '
         cmd.append('--use-pep517')
     elif use_pep517 is False:
         cmd.append('--no-use-pep517')
+**Bold**
+*Italic* or _Italic_
+***Bold Italic***
+__Underline__
+[Link text](any valid URL)
+`Code`
+~~Strike~~
+==Highlight==
+~Subscript~
+^Superscript^
+[Color text]{colorname}
+[Color text]{#colorcode}
+Line\nBreak
 
-    if requirements:
-        cmd.append('-r')
-    
-    pkg = quote(pkg)
-    cmd.append(pkg)
-
-    subprocess.check_call(cmd)
 
