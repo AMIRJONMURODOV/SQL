@@ -54,5 +54,9 @@ __Underline__
 [Color text]{colorname}
 [Color text]{#colorcode}
 Line\nBreak
+    time = ( "break_time") 
+    print (time) 
+    case = ("sole_brand")
+    print (case)
 
 
