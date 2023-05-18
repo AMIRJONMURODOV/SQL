@@ -1,0 +1,15 @@
+print = (name )
+name = "Murodov amirjon "
+print = name
+print = (example )
+example = "kyosunim "
+print = example 
+print ( colors )
+>>> colors = ["red", "blue", "green", "yellow" ]
+print = colors
+print = (result )
+>>> result = " " . join (colors)
+print = result
+print = (for )
+>>> for i in range (10):
+print = for 
